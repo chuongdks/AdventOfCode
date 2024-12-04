@@ -42,6 +42,3 @@ for line in input_data.splitlines():
                 break # get out of the loop if removing a level is safe
             
 print("Number of safe word: " + str(safeCounter))
-
-
-        
