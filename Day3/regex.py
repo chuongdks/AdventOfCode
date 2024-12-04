@@ -7,20 +7,24 @@ input_data = file.read()
 file.close()
 
 # Use regex 
-pattern = r"mul\((\d+),(\d+)\)" # use grouping '()' to take the number part only
-# pattern = r"(mul\(\d+,\d+\)|do\(\)|don't\(\))" 
+pattern = r"mul\(\d+,\d+\)|do\(\)|don't\(\)" 
 matches = re.findall(pattern, input_data)
+
 #print(matches)
 
-# for match in matches:
-#     print(match)
-    
+# Do math based on dewIt or not
 sum = 0
-mul = 1
-for tuple in matches:
-    for x in tuple:
-        mul *= int(x)
-    sum += mul
-    mul = 1
+dewIt = True
+
+for match in matches:
+    if match == "do()":
+        dewIt = True
+    elif match == "don't()":
+        dewIt = False
+        
+    if dewIt and match.startswith("mul"):
+        number = re.findall(r"\d+", match)
+        mul = int(number[0]) * int(number[1])
+        sum += mul
 
 print(sum)
