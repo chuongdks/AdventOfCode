@@ -1,0 +1,7 @@
+mylist = [ ["apple", "orange", "cherry"] , ["stuff"] ]
+print(mylist[0][1][1])
+
+
+We can have a fucking 3d List in python just like that
+Just check for individual word using outer and inner loop.
+Watch out for out of bound index

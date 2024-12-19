@@ -12,13 +12,10 @@ for line in input_data.splitlines():
     left, right = map(int, line.split())  # Split each line and convert to integers
     left_list.append(left)
     right_list.append(right)
-    
+
+# Sort the list
 left_list.sort()
 right_list.sort()
-
-# Output the results
-# print("Left List:", left_list)
-# print("Right List:", right_list)
 
 # Part 1:
 answer = 0
