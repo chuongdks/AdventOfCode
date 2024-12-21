@@ -4,3 +4,18 @@ and check if substring is in string (You can do that!)
 https://www.geeksforgeeks.org/check-if-string-contains-substring-in-python/
 
 Divide the list based on '|' or ','
+
+# Part 1 checkValid() loop explain:
+Iterate each updateList and iterate each element in that list
+If that element is equal to the 0 index of orderList (ex: "75"|53),
+but the index (updateList) of the 1st index (orderList. ex: 75|"53") is less than current index (updateList)
+or if orderList[j][1] is not found in row (why we use try-except block)
+
+# Part 2
+Same trick as part one but instead of returning True or False
+It just swap value of the current Index with the wrongIndex 
+And keep checking if the updated invalidsUpdate is valid or not in the while loop, else keep changing
+
+
+orderList: [['47' | '53'], ['97' | '13'], ['97' | '61'],..., [75 | 53] ]
+row: 75, 47, 61, 53, 29
