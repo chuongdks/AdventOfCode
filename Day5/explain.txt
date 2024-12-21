@@ -1,0 +1,6 @@
+List Comprehension (Opetional. Like Javascript )
+https://www.w3schools.com/python/python_lists_comprehension.asp
+and check if substring is in string (You can do that!)
+https://www.geeksforgeeks.org/check-if-string-contains-substring-in-python/
+
+Divide the list based on '|' or ','
